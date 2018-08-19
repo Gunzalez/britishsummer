@@ -1,0 +1,39 @@
+
+* {
+    outline: none;
+}
+
+h1, h2, h3, h4, h5, p {
+    padding: 0;
+    margin: 0 0 15px 0;
+    line-height: 120%;
+}
+
+h1 {
+    font-size: 4rem;
+    color: $brand-pink;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+.btn {
+    background: $brand-red;
+    color: #ffffff;
+    transition: all 0.25s;
+    border-radius: 6px;
+    font-size: 1.6rem;
+
+    &:hover {
+        background: $brand-pink;
+        color: #ffffff;
+    }
+
+    &:focus,
+    &:active {
+        background: $brand-red;
+        color: #ffffff;
+        outline: none;
+    }
+}

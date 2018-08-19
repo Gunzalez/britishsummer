@@ -1,0 +1,454 @@
+
+@import "colours";
+@import "fonts";
+@import "furniture";
+
+.display-none {
+    display: none;
+}
+
+.devices-wide {
+    display: none;
+}
+
+@media (min-width: $breakpoint2){
+    .devices-wide {
+        display: block;
+    }
+
+    .devices-narrow {
+        display: none;
+    }
+}
+
+body {
+    background: #ffffff;
+    color: $brand-dark;
+    font-size: 16px;
+}
+
+.social-media {
+    list-style: none;
+    margin: 0;
+    padding: 5px 0 0 0;
+    width: 100%;
+    text-align: right;
+
+    li {
+        display: inline;
+        margin: 0;
+        padding: 0 5px;
+
+        &:nth-last-child(1){
+            padding-right: 0;
+            a {
+                padding-right: 0;
+            }
+        }
+    }
+
+    a {
+        display: inline-block;
+        padding: 3px;
+        color: $brand-pink;
+    }
+}
+
+.main-navigation {
+
+    text-align: right;    
+    position: relative;
+    height: 100px;
+
+    > a {
+        position: absolute;
+        top: -15px;
+        left: 0;
+        display: block;
+        z-index: 10;
+
+        img {
+            display: block;
+            width: 102px;
+        }
+    }
+
+    .devices-wide,
+    .devices-narrow {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    ul {
+
+        list-style: none;
+        margin: 0;
+        width: 100%;
+        text-align: right;
+
+        li {
+            display: inline;
+            margin: 0;
+            padding: 0 5px;
+
+            &:nth-last-child(1){
+                padding-right: 0;
+
+                a {
+                    padding-right: 0;
+                }
+            }
+        }
+
+        a {
+            display: inline-block;
+            padding: 15px 7px;
+            color: $brand-red;
+            font-weight: bold;
+            font-size: 16px;
+
+            &:hover,
+            &.active {
+                text-decoration: none;
+                color: $brand-pink;
+            }
+        }
+    }
+
+    .mobile-navigation-trigger {
+        font-size: 3rem;
+    }
+}
+
+.hero-carousel {
+    height: 360px;
+    background: mediumvioletred;
+}
+
+.secondary-carousel {
+    padding: 15px 0;
+
+    .slide {
+        padding: 10px 80px;
+        text-align: center;
+        position: relative;
+
+        @media (max-width: $breakpoint2){
+            padding: 10px 50px;
+        }
+    }
+
+    .owl-prev,
+    .owl-next {
+        transition: all 0.33s;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: $brand-red !important;
+        display: block;
+        border-radius: 50%;
+        top: 50%;
+        margin-top: -20px;
+        left: 0;
+
+        &:hover {
+            background: $brand-pink !important;
+        }
+    }
+    
+    .owl-next {
+        right: 0;
+        left: auto;
+    }
+}
+
+.introduction {
+    padding: 20px 80px;
+    text-align: center;
+    position: relative;
+
+    @media (max-width: $breakpoint2){
+        padding: 15px 0;
+    }
+}
+
+.hero {
+    width: 100%;
+    display: block;
+}
+
+.pod {
+    min-height: 290px;
+    background: #4978cf;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 15px;
+    -webkit-box-shadow: 0px 2px 7px 2px rgba(0,0,0,0.09);
+    -moz-box-shadow: 0px 2px 7px 2px rgba(0,0,0,0.09);
+    box-shadow: 0px 2px 7px 2px rgba(0,0,0,0.09);
+
+    @media (min-width: $breakpoint2){
+        margin-bottom: 30px;
+    }
+}
+
+.footer {
+    height: 225px;
+    position: relative;
+    border-bottom: 10px solid $brand-pink;
+    background: $brand-red;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 0 10px 0;
+    
+
+        li {
+            display: inline;
+
+            a {
+                display: inline-block;
+                color: #ffffff;
+                font-size: 1.5rem;
+                padding: 10px 12px;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .tel-link {
+        color: #ffffff;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    p {
+        color: $brand-light;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    @media (min-width: $breakpoint2){
+
+        border-bottom: 20px solid #dddddd;
+
+        ul {
+            padding: 0;
+            justify-content: flex-start;
+    
+            li {
+                display: inline;
+                padding: 0 10px 15px 0;
+    
+                &:first-child{
+                    a {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+        
+        background: url("/images/bg-footer.png") top right no-repeat $brand-red;
+
+        p {
+            text-align: left;
+        }
+    }
+}
+
+.skirt {
+    position: absolute;
+    width: 255px;
+    height: 150px;
+    background: url("/images/bg-footer-fruit.png") 0 0 no-repeat;
+    background-size: cover;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -126px;
+    margin-bottom: 5px solid #ffffff;
+    display: none;
+
+    @media (min-width: $breakpoint2){
+        display: block;
+    }
+}
+
+.hero {
+    background-size: cover;
+    height: 360px;
+    background-position: center center;
+}
+
+.filter-controls-mobile {
+    margin-bottom: 15px;
+    margin-top: -10px;
+
+    button {
+        border: 1px solid $brand-light;
+        background: #ffffff;
+        color: lighten($brand-dark, 35%);
+        width: 100%;
+        padding: 6px 10px;
+        border-radius: 3px;
+        text-transform: uppercase;
+        
+        &:hover,
+        &:focus {
+            border: 1px solid $brand-light;
+            background: #ffffff;
+            color: $brand-dark;
+        }
+    }
+
+    @media (min-width: $breakpoint2){
+        display: none;
+    }
+}
+
+.filter-controls {
+    text-align: center;
+    padding: 0 0 15px;
+    display: none;
+
+    > span {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 10px;
+        margin: 0 3px 12px 4px;
+        color: #ffffff;
+        background: $brand-blue;
+        cursor: pointer;
+        // transition: all 0.33s;
+
+        &.active {
+            background: $brand-pink;
+        }
+
+        &.clear {
+            background: $brand-red;
+        }
+    }
+
+    &.on-for-mobile {
+        display: block;
+    }
+
+    @media (min-width: $breakpoint2){
+        display: block;
+        padding: 0 60px 20px;
+    }
+}
+
+.filtered {
+
+    @media (min-width: $breakpoint2){
+        min-height: 800px;
+    }
+
+    .filtered-out {
+        display: none;
+    }
+
+    #empty-list {
+        display: none;
+        
+        h2 {
+            text-align: center;
+            padding: 40px 30px 80px;
+            color: $brand-light;
+        }
+
+        &.is-empty {
+            display: block;
+        }
+    }
+
+    .recipe {
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+        display: block;
+        min-height: 290px;
+        padding: 10px;
+        margin-bottom: 15px;
+
+        @media (min-width: $breakpoint2){
+            margin-bottom: 30px;
+        }
+    }
+
+    .title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+        background: #ffffff;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 10px 12px;
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+        color: $brand-black;
+    }
+}
+
+.link-to-recipes {
+    padding: 20px 0;
+}
+
+.grower-image,
+.recipe-image {
+    margin-bottom: 15px;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    @media (min-width: $breakpoint2){
+        margin-bottom: 45px;
+    }
+}
+
+.grower-detail,
+.recipe-detail {
+    margin-bottom: 30px;
+
+    @media (min-width: $breakpoint2){
+        margin-bottom: 45px;
+    }
+}
+
+.grower {
+    float: left;
+    padding-top: 45px;
+    border-top: 1px solid lighten($brand-light, 15%);
+}
+
+// mobile navigation
+#menu {
+    background: #ffffff;
+    text-transform: uppercase;
+
+    a {
+        color: $brand-black;
+        font-size: 1.5rem;
+        padding: 15px 40px;
+    }
+}
