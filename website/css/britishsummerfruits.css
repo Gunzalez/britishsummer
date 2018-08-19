@@ -387,28 +387,60 @@ body {
       margin-bottom: 45px; } }
 
 .news-detail {
-  position: relative;
-  padding-left: 60px; }
+  position: relative; }
   .news-detail .download-pdf-link {
-    position: absolute;
-    left: 10px;
-    top: 7px;
-    text-indent: -9000px;
-    background-image: url("/images/download-pdf.png");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    width: 40px;
-    height: 53px;
-    background-size: cover; }
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: inline-block; }
+  @media (min-width: 768px) {
+    .news-detail {
+      padding-left: 60px; }
+      .news-detail .download-pdf-link {
+        position: absolute;
+        left: 10px;
+        top: 7px;
+        text-indent: -9000px;
+        background-image: url("/images/download-pdf.png");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 53px;
+        background-size: cover; }
+        .news-detail .download-pdf-link i {
+          display: none; } }
   .news-detail h3 {
     margin-top: -12px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     font-size: 1.8rem; }
+    @media (min-width: 768px) {
+      .news-detail h3 {
+        margin-bottom: 30px; } }
+  .news-detail [data-story="excerpt"],
+  .news-detail [data-toggle="expand"] {
+    display: block; }
+    .news-detail [data-story="excerpt"] > i,
+    .news-detail [data-toggle="expand"] > i {
+      margin-left: 15px; }
+  .news-detail [data-story="full-story"],
+  .news-detail [data-toggle="collapse"] {
+    display: none; }
+    .news-detail [data-story="full-story"] > i,
+    .news-detail [data-toggle="collapse"] > i {
+      margin-left: 15px; }
+  .news-detail.full [data-story="excerpt"],
+  .news-detail.full [data-toggle="expand"] {
+    display: none; }
+  .news-detail.full [data-story="full-story"],
+  .news-detail.full [data-toggle="collapse"] {
+    display: block; }
 
 .news {
   float: left;
-  padding-top: 45px;
-  border-top: 1px solid #f2f2f2; }
+  padding-top: 15px; }
+  @media (min-width: 768px) {
+    .news {
+      padding-top: 45px;
+      border-top: 1px solid #f2f2f2; } }
 
 #menu {
   background: #ffffff;

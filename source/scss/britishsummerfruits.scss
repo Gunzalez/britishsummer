@@ -450,33 +450,81 @@ body {
 
 .news-detail {
     position: relative;
-    padding-left: 60px;
 
     .download-pdf-link {
-        position: absolute;
-        left: 10px;
-        top: 7px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        display: inline-block;
+    }
 
-        text-indent: -9000px;
-        background-image: url('/images/download-pdf.png');
-        background-position: 0 0;
-        background-repeat: no-repeat;
-        width: 40px;
-        height: 53px;
-        background-size: cover;
+    @media (min-width: $breakpoint2){
+        padding-left: 60px;
+
+        .download-pdf-link {
+            position: absolute;
+            left: 10px;
+            top: 7px;
+            text-indent: -9000px;
+            background-image: url('/images/download-pdf.png');
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 53px;
+            background-size: cover;
+
+            i {
+                display: none;
+            }
+        }
     }
 
     h3 {
         margin-top: -12px;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
         font-size: 1.8rem;
+
+        @media (min-width: $breakpoint2){
+            margin-bottom: 30px;
+        }
+    }
+
+    [data-story="excerpt"],
+    [data-toggle="expand"] {
+        display: block;
+
+        > i {
+            margin-left: 15px;
+        }
+    }
+    [data-story="full-story"],
+    [data-toggle="collapse"] {
+        display: none;
+
+        > i {
+            margin-left: 15px;
+        }
+    }
+    
+    &.full {
+        [data-story="excerpt"],
+        [data-toggle="expand"] {
+            display: none;
+        }
+        [data-story="full-story"],
+        [data-toggle="collapse"] {
+            display: block;
+        }
     }
 }
 
 .news {
     float: left;
-    padding-top: 45px;
-    border-top: 1px solid lighten($brand-light, 15%);
+    padding-top: 15px;
+
+    @media (min-width: $breakpoint2){
+        padding-top: 45px;
+        border-top: 1px solid lighten($brand-light, 15%);
+    }
 }
 
 // mobile navigation

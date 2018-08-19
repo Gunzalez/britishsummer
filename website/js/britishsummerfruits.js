@@ -33,47 +33,6 @@
         }
     };
 
-    britishsummerfruits.recipeFilter = {
-
-        $controls: $('#filter-controls'),
-        $filtered: $('#filtered'),
-        $mobileTrigger: $('#filter-controls-mobile'),
-        init: function(){
-
-            this.$controls.on('click', 'span', function(){
-
-                var $filterTag = $(this);
-                var tag = $filterTag.attr('data-filter-tag');
-                var items = $('#filtered').find("[data-tags]");
-                var $emptyList = $('#empty-list');
-                
-                $emptyList.removeClass('is-empty');
-
-                if(!$filterTag.hasClass('active')){
-                    $filterTag.parent().find('.active').removeClass('active');
-                    for (var i = 0; i < items.length; i++) {
-                        var $item = $(items[i]);
-                        $item.addClass('filtered-out');
-                        if ($item.attr('data-tags').split(" ").indexOf(tag) > -1 || tag === "") {
-                            $item.removeClass('filtered-out');
-                        }
-                    }
-                    $filterTag.addClass('active');
-                }
-
-                if(!$('#filtered').find("[data-tags]").not('.filtered-out').length){
-                    $emptyList.addClass('is-empty');
-                }
-                
-            });
-
-            var that = this;
-            this.$mobileTrigger.on('click', function(){
-                that.$controls.toggleClass('on-for-mobile');
-            });
-        }
-    };
-
     britishsummerfruits.navigation = {
 
         // main navigation
@@ -106,6 +65,19 @@
         }
     };
 
+    britishsummerfruits.news = {
+
+        $items: $('.news-detail'),
+
+        init: function(){
+            this.$items.each((index, el) => {
+                $(el).find('[data-toggle]').on('click', () => {
+                    $(el).toggleClass('full');
+                })
+            });
+        }
+    };
+
     britishsummerfruits.carousel = {
         init: function(){
             $('.owl-carousel').owlCarousel({
@@ -118,14 +90,13 @@
         }
     };
 
-
     britishsummerfruits.init = function () {
 
         // all init here
         britishsummerfruits.environment.init();
         britishsummerfruits.navigation.init();
         britishsummerfruits.carousel.init();
-        britishsummerfruits.recipeFilter.init();
+        britishsummerfruits.news.init();
 
         // resize triggers
         $(window).on('resize', function () {
