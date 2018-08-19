@@ -325,6 +325,11 @@ body {
     }
 }
 
+.italics {
+    font-family: kaushan_scriptregular;
+    font-size: 3rem;
+}
+
 .filter-controls {
     text-align: center;
     padding: 0 0 15px;
@@ -338,7 +343,6 @@ body {
         color: #ffffff;
         background: $brand-blue;
         cursor: pointer;
-        // transition: all 0.33s;
 
         &.active {
             background: $brand-pink;
