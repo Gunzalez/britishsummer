@@ -93,7 +93,7 @@ body {
   .social-media a {
     display: inline-block;
     padding: 3px;
-    color: #ef2463; }
+    color: #0e5aa5; }
 
 .main-navigation {
   text-align: right;
@@ -129,7 +129,7 @@ body {
     .main-navigation ul a {
       display: inline-block;
       padding: 15px 7px;
-      color: #902d3f;
+      color: #0e5aa5;
       font-weight: bold;
       font-size: 16px; }
       .main-navigation ul a:hover, .main-navigation ul a.active {
@@ -140,7 +140,7 @@ body {
 
 .hero-carousel {
   height: 360px;
-  background: mediumvioletred; }
+  background: #0e5aa5; }
 
 .secondary-carousel {
   padding: 15px 0; }
@@ -289,7 +289,7 @@ body {
     border-radius: 10px;
     margin: 0 3px 12px 4px;
     color: #ffffff;
-    background: #1059a8;
+    background: #0e5aa5;
     cursor: pointer; }
     .filter-controls > span.active {
       background: #ef2463; }

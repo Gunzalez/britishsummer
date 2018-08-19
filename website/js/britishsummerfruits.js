@@ -1,14 +1,14 @@
 // JavaScript Document
 (function ($, window) {
 
-    var berrygood = {};
+    var britishsummerfruits = {};
 
-    berrygood.properties = {
+    britishsummerfruits.properties = {
         windowWidth: '',
         isMobile: false
     };
 
-    berrygood.utils = {
+    britishsummerfruits.utils = {
 
         // checks based on CSS class
         mobileCheck: function() {
@@ -20,20 +20,20 @@
         }
     };
 
-    berrygood.environment = {
+    britishsummerfruits.environment = {
 
         resize: function(){
         },
 
         init: function (){
             // check for mobile
-            if (berrygood.utils.mobileCheck()){
-                berrygood.properties.isMobile = true;
+            if (britishsummerfruits.utils.mobileCheck()){
+                britishsummerfruits.properties.isMobile = true;
             }
         }
     };
 
-    berrygood.recipeFilter = {
+    britishsummerfruits.recipeFilter = {
 
         $controls: $('#filter-controls'),
         $filtered: $('#filtered'),
@@ -74,7 +74,7 @@
         }
     };
 
-    berrygood.navigation = {
+    britishsummerfruits.navigation = {
 
         // main navigation
         $mobileNav: $('nav#menu'),
@@ -82,7 +82,7 @@
         API: undefined,
 
         resize: function(){
-            berrygood.navigation.API.close();
+            britishsummerfruits.navigation.API.close();
         },
 
         init: function(){
@@ -93,20 +93,20 @@
                 }
             }
 
-            berrygood.navigation.$mobileNav.mmenu({
+            britishsummerfruits.navigation.$mobileNav.mmenu({
                 "offCanvas": {
                     "position": "right"
                 }
             });
 
-            berrygood.navigation.API = berrygood.navigation.$mobileNav.data("mmenu");
-            berrygood.navigation.$mobileNavCloseButton.on('click', function() {
-                berrygood.navigation.API.close();
+            britishsummerfruits.navigation.API = britishsummerfruits.navigation.$mobileNav.data("mmenu");
+            britishsummerfruits.navigation.$mobileNavCloseButton.on('click', function() {
+                britishsummerfruits.navigation.API.close();
             });
         }
     };
 
-    berrygood.carousel = {
+    britishsummerfruits.carousel = {
         init: function(){
             $('.owl-carousel').owlCarousel({
                 items:1,
@@ -119,42 +119,42 @@
     };
 
 
-    berrygood.init = function () {
+    britishsummerfruits.init = function () {
 
         // all init here
-        berrygood.environment.init();
-        berrygood.navigation.init();
-        berrygood.carousel.init();
-        berrygood.recipeFilter.init();
+        britishsummerfruits.environment.init();
+        britishsummerfruits.navigation.init();
+        britishsummerfruits.carousel.init();
+        britishsummerfruits.recipeFilter.init();
 
         // resize triggers
         $(window).on('resize', function () {
 
             var newWidth = $(window).width(),
-                oldWidth = berrygood.properties.windowWidth;
+                oldWidth = britishsummerfruits.properties.windowWidth;
 
             if (oldWidth != newWidth) {
-                berrygood.properties.windowWidth = newWidth;
-                berrygood.resize();
+                britishsummerfruits.properties.windowWidth = newWidth;
+                britishsummerfruits.resize();
             }
         });
 
         // trigger initial resize, just to be sure
-        berrygood.resize();
+        britishsummerfruits.resize();
         $(window).trigger('resize');
     };
 
     // main resize
-    berrygood.resize = function () {
-        berrygood.environment.resize();
-        berrygood.navigation.resize();
+    britishsummerfruits.resize = function () {
+        britishsummerfruits.environment.resize();
+        britishsummerfruits.navigation.resize();
     };
 
     // main init
     $(document).ready(function () {
-        berrygood.init();
+        britishsummerfruits.init();
         $(window).scroll(function (event) {
-            //berrygood.scrollEvents();
+            //britishsummerfruits.scrollEvents();
         });
     });
 
