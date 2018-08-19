@@ -62,14 +62,23 @@ body {
 
     .logo {
         position: absolute;
-        top: -15px;
+        top: 15px;
         left: 0;
         display: block;
         z-index: 10;
 
         img {
             display: block;
-            width: 380px;
+            width: 280px;
+        }
+
+        @media (min-width: $breakpoint2){
+            top: -15px;
+
+            img {
+                display: block;
+                width: 380px;
+            }
         }
     }
 
@@ -145,7 +154,7 @@ body {
         position: absolute;
         width: 40px;
         height: 40px;
-        background: $brand-red !important;
+        background: $brand-blue !important;
         display: block;
         border-radius: 50%;
         top: 50%;
@@ -164,12 +173,12 @@ body {
 }
 
 .introduction {
-    padding: 20px 80px;
+    padding: 15px 0;
     text-align: center;
     position: relative;
 
-    @media (max-width: $breakpoint2){
-        padding: 15px 0;
+    @media (min-width: $breakpoint2){
+        padding: 20px 80px;
     }
 }
 

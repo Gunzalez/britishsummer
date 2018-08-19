@@ -101,13 +101,19 @@ body {
   height: 100px; }
   .main-navigation .logo {
     position: absolute;
-    top: -15px;
+    top: 15px;
     left: 0;
     display: block;
     z-index: 10; }
     .main-navigation .logo img {
       display: block;
-      width: 380px; }
+      width: 280px; }
+    @media (min-width: 768px) {
+      .main-navigation .logo {
+        top: -15px; }
+        .main-navigation .logo img {
+          display: block;
+          width: 380px; } }
   .main-navigation .devices-wide,
   .main-navigation .devices-narrow {
     position: absolute;
@@ -157,7 +163,7 @@ body {
     position: absolute;
     width: 40px;
     height: 40px;
-    background: #902d3f !important;
+    background: #0e5aa5 !important;
     display: block;
     border-radius: 50%;
     top: 50%;
@@ -171,12 +177,12 @@ body {
     left: auto; }
 
 .introduction {
-  padding: 20px 80px;
+  padding: 15px 0;
   text-align: center;
   position: relative; }
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     .introduction {
-      padding: 15px 0; } }
+      padding: 20px 80px; } }
 
 .hero {
   width: 100%;
