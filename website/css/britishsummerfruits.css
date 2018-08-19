@@ -99,15 +99,15 @@ body {
   text-align: right;
   position: relative;
   height: 100px; }
-  .main-navigation > a {
+  .main-navigation .logo {
     position: absolute;
     top: -15px;
     left: 0;
     display: block;
     z-index: 10; }
-    .main-navigation > a img {
+    .main-navigation .logo img {
       display: block;
-      width: 102px; }
+      width: 380px; }
   .main-navigation .devices-wide,
   .main-navigation .devices-narrow {
     position: absolute;
