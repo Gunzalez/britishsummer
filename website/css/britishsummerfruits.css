@@ -366,27 +366,46 @@ body {
 .link-to-recipes {
   padding: 20px 0; }
 
-.grower-image,
+.news-image,
 .recipe-image {
   margin-bottom: 15px; }
-  .grower-image img,
+  .news-image img,
   .recipe-image img {
     display: block;
     width: 100%; }
   @media (min-width: 768px) {
-    .grower-image,
+    .news-image,
     .recipe-image {
       margin-bottom: 45px; } }
 
-.grower-detail,
+.news-detail,
 .recipe-detail {
   margin-bottom: 30px; }
   @media (min-width: 768px) {
-    .grower-detail,
+    .news-detail,
     .recipe-detail {
       margin-bottom: 45px; } }
 
-.grower {
+.news-detail {
+  position: relative;
+  padding-left: 60px; }
+  .news-detail .download-pdf-link {
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    text-indent: -9000px;
+    background-image: url("/images/download-pdf.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 53px;
+    background-size: cover; }
+  .news-detail h3 {
+    margin-top: -12px;
+    margin-bottom: 30px;
+    font-size: 1.8rem; }
+
+.news {
   float: left;
   padding-top: 45px;
   border-top: 1px solid #f2f2f2; }

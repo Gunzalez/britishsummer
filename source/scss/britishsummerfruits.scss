@@ -425,7 +425,7 @@ body {
     padding: 20px 0;
 }
 
-.grower-image,
+.news-image,
 .recipe-image {
     margin-bottom: 15px;
 
@@ -439,7 +439,7 @@ body {
     }
 }
 
-.grower-detail,
+.news-detail,
 .recipe-detail {
     margin-bottom: 30px;
 
@@ -448,7 +448,32 @@ body {
     }
 }
 
-.grower {
+.news-detail {
+    position: relative;
+    padding-left: 60px;
+
+    .download-pdf-link {
+        position: absolute;
+        left: 10px;
+        top: 7px;
+
+        text-indent: -9000px;
+        background-image: url('/images/download-pdf.png');
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 53px;
+        background-size: cover;
+    }
+
+    h3 {
+        margin-top: -12px;
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+    }
+}
+
+.news {
     float: left;
     padding-top: 45px;
     border-top: 1px solid lighten($brand-light, 15%);
