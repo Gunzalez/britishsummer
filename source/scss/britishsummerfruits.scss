@@ -11,6 +11,22 @@
     display: none;
 }
 
+.visuallyhidden { 
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; width: 1px; 
+    margin: -1px; padding: 0; border: 0; 
+}
+
+.introduction {
+
+    &.no-header {
+        padding-top: 45px;
+        min-height: 180px;
+    }
+}
+
 @media (min-width: $breakpoint2){
     .devices-wide {
         display: block;
