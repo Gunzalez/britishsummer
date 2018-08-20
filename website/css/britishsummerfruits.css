@@ -211,7 +211,7 @@ body {
 .footer {
   height: 225px;
   position: relative;
-  border-bottom: 10px solid #ef2463;
+  border-bottom: 10px solid #cccccc;
   background: #0e5aa5; }
   .footer ul {
     list-style: none;
