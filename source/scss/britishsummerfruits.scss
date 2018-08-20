@@ -339,6 +339,19 @@ body {
     }
 }
 
+.contact-image {
+    margin-bottom: 10px;
+    text-align: center;
+
+    img {
+        display: inline-block;
+    }
+
+    @media (min-width: $breakpoint2){
+        margin-bottom: 30px;
+    }
+}
+
 .member-image {
 
     @media (max-width: $breakpoint2){
@@ -354,6 +367,8 @@ body {
 
 }
 
+.contact-form,
+.contact-detail,
 .news-detail,
 .member-detail {
     margin-bottom: 30px;
@@ -445,14 +460,75 @@ body {
     }
 }
 
+.contact,
 .news,
 .member {
     float: left;
     padding-top: 15px;
+    width: 100%;
 
     @media (min-width: $breakpoint2){
         padding-top: 45px;
         border-top: 1px solid lighten($brand-light, 15%);
+    }
+}
+
+.contact-form {
+
+    label {
+        display: none;
+    }
+
+    textarea {
+        resize: none;
+        height: 200px;
+    }
+
+    .error-span {
+        color: red;
+        margin-top: 3px;
+        margin-bottom: -5px;
+        font-size: 1.3rem;
+        display: none;
+    }
+
+    .error {
+
+        input {
+            border-color: red;
+        }
+
+        .error-span {
+            display: block;
+        }
+    }
+
+
+    @media (min-width: $breakpoint2){
+
+        .error-span {
+            margin-top: -10px;
+            margin-bottom: 2px;
+        }
+
+        input::placeholder {
+            color: #ffffff;
+        }
+
+        label {
+            display: block;
+            padding-top: 5px;
+
+            span {
+                color: lighten($brand-dark, 30%);
+                font-weight: normal;
+            }
+        }
+
+        input,
+        textarea {
+            margin-bottom: 12px;
+        }
     }
 }
 

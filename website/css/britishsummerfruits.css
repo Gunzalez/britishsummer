@@ -300,6 +300,15 @@ body {
     .news-image {
       margin-bottom: 45px; } }
 
+.contact-image {
+  margin-bottom: 10px;
+  text-align: center; }
+  .contact-image img {
+    display: inline-block; }
+  @media (min-width: 768px) {
+    .contact-image {
+      margin-bottom: 30px; } }
+
 @media (max-width: 768px) {
   .member-image {
     text-align: center; }
@@ -309,10 +318,14 @@ body {
       display: block;
       margin: 0 auto; } }
 
+.contact-form,
+.contact-detail,
 .news-detail,
 .member-detail {
   margin-bottom: 30px; }
   @media (min-width: 768px) {
+    .contact-form,
+    .contact-detail,
     .news-detail,
     .member-detail {
       margin-bottom: 45px; } }
@@ -375,15 +388,54 @@ body {
   .news-detail.full [data-toggle="collapse"] {
     display: block; }
 
+.contact,
 .news,
 .member {
   float: left;
-  padding-top: 15px; }
+  padding-top: 15px;
+  width: 100%; }
   @media (min-width: 768px) {
+    .contact,
     .news,
     .member {
       padding-top: 45px;
       border-top: 1px solid #f2f2f2; } }
+
+.contact-form label {
+  display: none; }
+
+.contact-form textarea {
+  resize: none;
+  height: 200px; }
+
+.contact-form .error-span {
+  color: red;
+  margin-top: 3px;
+  margin-bottom: -5px;
+  font-size: 1.3rem;
+  display: none; }
+
+.contact-form .error input {
+  border-color: red; }
+
+.contact-form .error .error-span {
+  display: block; }
+
+@media (min-width: 768px) {
+  .contact-form .error-span {
+    margin-top: -10px;
+    margin-bottom: 2px; }
+  .contact-form input::placeholder {
+    color: #ffffff; }
+  .contact-form label {
+    display: block;
+    padding-top: 5px; }
+    .contact-form label span {
+      color: gray;
+      font-weight: normal; }
+  .contact-form input,
+  .contact-form textarea {
+    margin-bottom: 12px; } }
 
 #menu {
   background: #ffffff;
