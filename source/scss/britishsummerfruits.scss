@@ -223,18 +223,12 @@ body {
             a {
                 display: inline-block;
                 color: #ffffff;
-                font-size: 1.5rem;
+                font-size: 1.7rem;
+                font-weight: 100;
                 padding: 10px 12px;
 
                 &:hover {
                     text-decoration: none;
-                }
-            }
-
-            &.not-link {
-
-                @media (max-width: $breakpoint2){
-                    display: block;
                 }
             }
         }
@@ -253,7 +247,7 @@ body {
         padding:30px 0 0 0;
         margin-bottom: 0;
         color: #ffffff;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 
     .address {
@@ -511,6 +505,7 @@ body {
             margin-bottom: 2px;
         }
 
+        textarea::placeholder,
         input::placeholder {
             color: #ffffff;
         }

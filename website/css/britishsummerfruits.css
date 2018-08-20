@@ -46,7 +46,8 @@ h1, h2, h3, h4, h5, p {
 
 p {
   color: #333333;
-  font-weight: 300; }
+  font-weight: 300;
+  font-size: 1.8rem; }
 
 h1 {
   font-size: 3.6rem;
@@ -238,13 +239,11 @@ body {
       .footer ul li a {
         display: inline-block;
         color: #ffffff;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
+        font-weight: 100;
         padding: 10px 12px; }
         .footer ul li a:hover {
           text-decoration: none; }
-      @media (max-width: 768px) {
-        .footer ul li.not-link {
-          display: block; } }
   .footer .tel-link {
     color: #ffffff; }
     .footer .tel-link:hover {
@@ -254,7 +253,7 @@ body {
     padding: 30px 0 0 0;
     margin-bottom: 0;
     color: #ffffff;
-    font-size: 1.5rem; }
+    font-size: 1.7rem; }
   .footer .address {
     color: #ffe6d0;
     font-size: 1.5rem;
@@ -438,6 +437,7 @@ body {
   .contact-form .error-span {
     margin-top: -10px;
     margin-bottom: 2px; }
+  .contact-form textarea::placeholder,
   .contact-form input::placeholder {
     color: #ffffff; }
   .contact-form label {
