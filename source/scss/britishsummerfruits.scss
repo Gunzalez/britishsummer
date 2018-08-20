@@ -318,9 +318,23 @@ body {
     }
 }
 
+.member-image {
+
+    @media (max-width: $breakpoint2){
+        text-align: center;
+
+        img {
+            width: auto;
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+}
+
 .news-detail,
-.member-detail,
-.member-address {
+.member-detail {
     margin-bottom: 30px;
 
     @media (min-width: $breakpoint2){
@@ -328,8 +342,17 @@ body {
     }
 }
 
+.member-address {
+    margin-bottom: 0px;
+    @media (min-width: $breakpoint2){
+        margin-bottom: 45px;
+    }
+}
+
 .member-detail {
-    padding-top: 30px;
+    @media (min-width: $breakpoint2){
+        padding-top: 30px;
+    }
 }
 
 .news-detail {
