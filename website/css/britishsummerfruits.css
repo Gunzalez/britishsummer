@@ -240,7 +240,7 @@ body {
   @media (min-width: 768px) {
     .footer {
       border-bottom: 20px solid #dddddd;
-      background: url("/images/bg-footer.png") top right no-repeat #902d3f; }
+      background: url("/images/bg-footer.png") top right no-repeat #0e5aa5; }
       .footer ul {
         padding: 0;
         justify-content: flex-start; }
