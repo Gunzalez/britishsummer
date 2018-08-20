@@ -284,9 +284,9 @@ body {
   height: 360px;
   background-position: center center; }
 
-.italics {
-  font-family: kaushan_scriptregular;
-  font-size: 3rem; }
+.italics * {
+  font-family: kaushan_scriptregular !important;
+  font-size: 3rem !important; }
 
 .member-image,
 .news-image {

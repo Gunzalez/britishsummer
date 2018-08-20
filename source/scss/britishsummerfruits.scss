@@ -321,8 +321,10 @@ body {
 }
 
 .italics {
-    font-family: kaushan_scriptregular;
-    font-size: 3rem;
+    * {
+        font-family: kaushan_scriptregular !important;
+        font-size: 3rem !important;
+    }
 }
 
 .member-image,
