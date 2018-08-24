@@ -203,18 +203,44 @@ body {
 }
 
 .pod {
-    min-height: 290px;
-    background: $brand-blue;
-    color: #FFFFFF;
+    height: 390px;
+    background-size: cover;
+    background-position: center center;
+    color: #ffffff;
     text-align: center;
-    padding: 10px;
     margin-bottom: 15px;
-    -webkit-box-shadow: 0px 2px 7px 2px rgba(0,0,0,0.09);
-    -moz-box-shadow: 0px 2px 7px 2px rgba(0,0,0,0.09);
-    box-shadow: 0px 2px 7px 2px rgba(0,0,0,0.09);
 
     @media (min-width: $breakpoint2){
         margin-bottom: 30px;
+    }
+}
+
+.sister-site {
+    position: relative;
+    height: 390px;
+
+    .copy {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #ffffff;
+        background: rgba(255, 255, 255, 0.9);
+        width: 100%;
+        height: 50%;
+        padding: 15px 20px 5px 20px;
+    }
+
+    img {
+        position: absolute;
+        top: -150px;
+        left: 50%;
+        margin-left: -85px;
+    }
+
+    p {
+        color: $brand-dark;
+        font-size: 1.6rem;
+        text-align: left;
     }
 }
 
@@ -272,13 +298,13 @@ body {
     }
 
     @media (min-width: $breakpoint2){
+        border-bottom: 20px solid #dddddd;
+        background: url("../images/bg-footer.png") top right no-repeat $brand-blue;
 
         .copyright {
             padding: 12px 45px 0 0;
             float: left;
         }
-
-        border-bottom: 20px solid #dddddd;
 
         ul {
             padding: 0;
@@ -295,8 +321,6 @@ body {
                 }
             }
         }
-        
-        background: url("images/bg-footer.png") top right no-repeat $brand-blue;
 
         .address {
             text-align: left;
@@ -308,7 +332,7 @@ body {
     position: absolute;
     width: 255px;
     height: 150px;
-    background: url("images/bg-footer-fruit.png") 0 0 no-repeat;
+    background: url("../images/bg-footer-fruit.png") 0 0 no-repeat;
     background-size: cover;
     bottom: -15px;
     left: 50%;
@@ -373,7 +397,6 @@ body {
             margin: 0 auto;
         }
     }
-
 }
 
 .contact-form,
@@ -417,7 +440,7 @@ body {
             left: 10px;
             top: 7px;
             text-indent: -9000px;
-            background-image: url('images/download-pdf.png');
+            background-image: url('../images/download-pdf.png');
             background-position: 0 0;
             background-repeat: no-repeat;
             width: 40px;
