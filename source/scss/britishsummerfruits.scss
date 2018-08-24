@@ -296,7 +296,7 @@ body {
             }
         }
         
-        background: url("/images/bg-footer.png") top right no-repeat $brand-blue;
+        background: url("images/bg-footer.png") top right no-repeat $brand-blue;
 
         .address {
             text-align: left;
@@ -308,7 +308,7 @@ body {
     position: absolute;
     width: 255px;
     height: 150px;
-    background: url("/images/bg-footer-fruit.png") 0 0 no-repeat;
+    background: url("images/bg-footer-fruit.png") 0 0 no-repeat;
     background-size: cover;
     bottom: -15px;
     left: 50%;
@@ -417,7 +417,7 @@ body {
             left: 10px;
             top: 7px;
             text-indent: -9000px;
-            background-image: url('/images/download-pdf.png');
+            background-image: url('images/download-pdf.png');
             background-position: 0 0;
             background-repeat: no-repeat;
             width: 40px;
