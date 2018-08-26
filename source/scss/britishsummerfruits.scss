@@ -53,8 +53,9 @@
 
             img {
                 max-width: 70%;
-                display: inline-block;
-                margin-bottom: 30px;
+                display: block;
+                margin: 0 auto 30px;
+                width: auto;
             }
         }
 
