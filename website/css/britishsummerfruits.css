@@ -77,6 +77,62 @@ h4 {
   padding-top: 45px;
   min-height: 180px; }
 
+.tertiary-carousel .slide {
+  width: 100%;
+  height: 390px;
+  position: relative; }
+
+.tertiary-carousel .owl-dots {
+  display: none; }
+
+.tertiary-carousel.members-carousel {
+  border: 1px solid #cccccc; }
+  .tertiary-carousel.members-carousel a {
+    display: block;
+    width: 100%;
+    height: 390px;
+    padding-top: 40px; }
+    .tertiary-carousel.members-carousel a:hover {
+      text-decoration: none; }
+    .tertiary-carousel.members-carousel a img {
+      max-width: 70%;
+      display: inline-block; }
+  .tertiary-carousel.members-carousel h2 {
+    color: #ef2463;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #cccccc;
+    display: inline-block;
+    margin-bottom: 50px;
+    padding: 0 30px 15px; }
+
+.owl-prev,
+.owl-next {
+  transition: all 0.33s;
+  position: absolute;
+  width: 39px;
+  height: 39px;
+  display: block;
+  border-radius: 50%;
+  top: 50%;
+  margin-top: -20px;
+  left: -5px;
+  opacity: 0.8;
+  background: url("../images/bg-arrow-left.png") center center no-repeat #8e2c3d !important; }
+  .owl-prev:hover,
+  .owl-next:hover {
+    opacity: 1;
+    background: url("../images/bg-arrow-left.png") center center no-repeat #ef2463 !important; }
+  .owl-prev > span,
+  .owl-next > span {
+    display: none; }
+
+.owl-next {
+  right: -5px;
+  left: auto;
+  background: url("../images/bg-arrow-right.png") center center no-repeat #8e2c3d !important; }
+  .owl-next:hover {
+    background: url("../images/bg-arrow-right.png") center center no-repeat #ef2463 !important; }
+
 @media (min-width: 768px) {
   .devices-wide {
     display: block; }
@@ -159,34 +215,6 @@ body {
 .hero-carousel {
   height: 360px;
   background: #1059a8; }
-
-.secondary-carousel {
-  padding: 15px 0; }
-  .secondary-carousel .slide {
-    padding: 10px 80px;
-    text-align: center;
-    position: relative; }
-    @media (max-width: 768px) {
-      .secondary-carousel .slide {
-        padding: 10px 50px; } }
-  .secondary-carousel .owl-prev,
-  .secondary-carousel .owl-next {
-    transition: all 0.33s;
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background: #1059a8 !important;
-    display: block;
-    border-radius: 50%;
-    top: 50%;
-    margin-top: -20px;
-    left: 0; }
-    .secondary-carousel .owl-prev:hover,
-    .secondary-carousel .owl-next:hover {
-      background: #ef2463 !important; }
-  .secondary-carousel .owl-next {
-    right: 0;
-    left: auto; }
 
 .introduction {
   padding: 15px 0;
@@ -367,6 +395,8 @@ body {
 
 .member-address {
   margin-bottom: 0px; }
+  .member-address p {
+    font-size: 1.6rem; }
   @media (min-width: 768px) {
     .member-address {
       margin-bottom: 45px; } }

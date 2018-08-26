@@ -70,10 +70,10 @@
         $items: $('.news-detail'),
 
         init: function(){
-            this.$items.each((index, el) => {
-                $(el).find('[data-toggle]').on('click', () => {
+            this.$items.each(function(index, el){
+                $(el).find('[data-toggle]').on('click', function(){
                     $(el).toggleClass('full');
-                })
+                });
             });
         }
     };
@@ -82,11 +82,39 @@
         init: function(){
             $('.owl-carousel').owlCarousel({
                 items:1,
-                margin:10,
                 autoHeight:true,
                 nav: true,
                 loop: true
             });
+        }
+    };
+
+    britishsummerfruits.heroCarousel = {
+
+        $carousel: $('#hero-carousel'),
+
+        init: function(){
+            var dots = this.$carousel.find('.dots span');
+            var slides = this.$carousel.find('.slide');
+
+            if(this.$carousel.length){
+                setInterval(function(){
+
+                    // current index
+                    var count = slides.length;
+                    var index = slides.index($('.active'));
+                    index++;
+                    if(index === count){
+                        index = 0;
+                    }
+                    slides.removeClass('active');
+                    slides.eq(index).addClass('active');
+
+                    dots.removeClass('active');
+                    dots.eq(index).addClass('active');
+
+                }, 7000);
+            }
         }
     };
 
@@ -97,6 +125,8 @@
         britishsummerfruits.navigation.init();
         britishsummerfruits.carousel.init();
         britishsummerfruits.news.init();
+        britishsummerfruits.carousel.init();
+        britishsummerfruits.heroCarousel.init();
 
         // resize triggers
         $(window).on('resize', function () {
