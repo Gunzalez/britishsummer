@@ -1,4 +1,3 @@
-
 * {
     outline: none;
 }
@@ -59,15 +58,19 @@ h4 {
     font-size: 1.6rem;
     font-weight: 100;
 
-    &:hover {
-        background: $brand-pink;
-        color: #ffffff;
-    }
-
     &:focus,
     &:active {
         background: $brand-red;
         color: #ffffff;
         outline: none;
+    }
+
+    &.btn-blue {
+        background: $brand-blue;
+    }
+
+    &:hover {
+        background: $brand-pink !important;
+        color: #ffffff;
     }
 }

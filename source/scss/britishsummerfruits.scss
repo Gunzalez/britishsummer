@@ -54,6 +54,7 @@
             img {
                 max-width: 70%;
                 display: inline-block;
+                margin-bottom: 30px;
             }
         }
 
@@ -68,7 +69,6 @@
     }
 }
 
-
 .owl-prev,
 .owl-next {
     transition: all 0.33s;
@@ -81,7 +81,7 @@
     margin-top: -20px;
     left: -5px;
     opacity: 0.8;
-    background: url("../images/bg-arrow-left.png") center center no-repeat $brand-red !important;
+    background: url("../images/bg-arrow-left.png") center center no-repeat lighten($brand-blue, 20%) !important;
 
     &:hover {
         opacity: 1;
@@ -96,7 +96,7 @@
 .owl-next {
     right: -5px;
     left: auto;
-    background: url("../images/bg-arrow-right.png") center center no-repeat $brand-red !important;
+    background: url("../images/bg-arrow-right.png") center center no-repeat lighten($brand-blue, 20%) !important;
 
     &:hover {
         background: url("../images/bg-arrow-right.png") center center no-repeat $brand-pink !important;

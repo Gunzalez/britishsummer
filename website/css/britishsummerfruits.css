@@ -49,13 +49,15 @@ h4 {
   border-radius: 6px;
   font-size: 1.6rem;
   font-weight: 100; }
-  .btn:hover {
-    background: #ef2463;
-    color: #ffffff; }
   .btn:focus, .btn:active {
     background: #8e2c3d;
     color: #ffffff;
     outline: none; }
+  .btn.btn-blue {
+    background: #1059a8; }
+  .btn:hover {
+    background: #ef2463 !important;
+    color: #ffffff; }
 
 .display-none {
   display: none; }
@@ -96,7 +98,8 @@ h4 {
       text-decoration: none; }
     .tertiary-carousel.members-carousel a img {
       max-width: 70%;
-      display: inline-block; }
+      display: inline-block;
+      margin-bottom: 30px; }
   .tertiary-carousel.members-carousel h2 {
     color: #ef2463;
     margin-bottom: 15px;
@@ -117,7 +120,7 @@ h4 {
   margin-top: -20px;
   left: -5px;
   opacity: 0.8;
-  background: url("../images/bg-arrow-left.png") center center no-repeat #8e2c3d !important; }
+  background: url("../images/bg-arrow-left.png") center center no-repeat #328bec !important; }
   .owl-prev:hover,
   .owl-next:hover {
     opacity: 1;
@@ -129,7 +132,7 @@ h4 {
 .owl-next {
   right: -5px;
   left: auto;
-  background: url("../images/bg-arrow-right.png") center center no-repeat #8e2c3d !important; }
+  background: url("../images/bg-arrow-right.png") center center no-repeat #328bec !important; }
   .owl-next:hover {
     background: url("../images/bg-arrow-right.png") center center no-repeat #ef2463 !important; }
 
