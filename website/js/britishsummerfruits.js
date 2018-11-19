@@ -113,7 +113,7 @@
                     dots.removeClass('active');
                     dots.eq(index).addClass('active');
 
-                }, 7000);
+                }, 5000);
             }
         }
     };
@@ -134,7 +134,7 @@
             var newWidth = $(window).width(),
                 oldWidth = britishsummerfruits.properties.windowWidth;
 
-            if (oldWidth != newWidth) {
+            if (oldWidth !== newWidth) {
                 britishsummerfruits.properties.windowWidth = newWidth;
                 britishsummerfruits.resize();
             }
