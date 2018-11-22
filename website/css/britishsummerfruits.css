@@ -46,9 +46,10 @@ h4 {
   background: #8e2c3d;
   color: #ffffff;
   transition: all 0.25s;
-  border-radius: 6px;
+  border-radius: 12px;
   font-size: 1.6rem;
-  font-weight: 100; }
+  font-weight: 100;
+  padding: 3px 30px; }
   .btn:focus, .btn:active {
     background: #8e2c3d;
     color: #ffffff;
@@ -127,10 +128,9 @@ h4 {
       opacity: 1; }
     .hero-carousel .slide .title {
       color: #1059a8;
-      text-transform: uppercase;
       letter-spacing: 0;
       font-size: 2.6rem;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(255, 255, 255, 0.9);
       line-height: 100%;
       padding: 12px 20px;
       margin-top: 30px;
@@ -138,7 +138,8 @@ h4 {
       @media (min-width: 768px) {
         .hero-carousel .slide .title {
           width: 45%;
-          font-size: 3rem; } }
+          font-size: 4rem;
+          letter-spacing: -1px; } }
   .hero-carousel .dots {
     position: absolute;
     bottom: 0;
@@ -266,7 +267,7 @@ body {
       padding: 15px 7px;
       color: #1059a8;
       font-weight: bold;
-      font-size: 1.8rem; }
+      font-size: 2.0rem; }
       .main-navigation ul a:hover, .main-navigation ul a.active {
         text-decoration: none;
         color: #ef2463; }
@@ -279,11 +280,13 @@ body {
 
 .introduction {
   padding: 15px 0;
-  text-align: center;
   position: relative; }
   @media (min-width: 768px) {
     .introduction {
       padding: 20px 80px; } }
+
+.centre {
+  text-align: center; }
 
 .hero {
   width: 100%;
@@ -337,52 +340,72 @@ body {
 .footer {
   height: 225px;
   position: relative;
-  border-bottom: 10px solid #cccccc;
+  border-bottom: 10px solid #ffffff;
   background: #1059a8; }
   .footer ul {
     list-style: none;
-    margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 10px 0 10px 0; }
+    padding: 0;
+    margin: 0; }
     .footer ul li {
-      display: inline; }
+      display: inline;
+      padding: 0; }
       .footer ul li a {
         display: inline-block;
+        border-right: 1px solid white;
         color: #ffffff;
         font-size: 1.7rem;
-        font-weight: 100;
-        padding: 10px 12px; }
+        line-height: 110%;
+        padding: 0 12px;
+        font-weight: bold; }
         .footer ul li a:hover {
           text-decoration: none; }
+      .footer ul li:nth-last-child(1) a {
+        border-right: none; }
   .footer .tel-link {
     color: #ffffff; }
     .footer .tel-link:hover {
       text-decoration: none; }
+  .footer .top {
+    padding: 20px 0; }
   .footer .copyright {
     text-align: center;
-    padding: 30px 0 0 0;
-    margin-bottom: 0;
+    padding: 4px 0 0 0;
     color: #ffffff;
-    font-size: 1.7rem; }
+    font-size: 1.7rem;
+    font-weight: bold; }
   .footer .address {
-    color: #f9f4f5;
-    font-size: 1.5rem;
-    text-align: center; }
+    color: #b4d0f1;
+    font-size: 1.7rem;
+    text-align: center;
+    font-weight: bold; }
+  @media (min-width: 960px) {
+    .footer .container {
+      background: url("../images/bg-footer.png") top right no-repeat #1059a8; } }
   @media (min-width: 768px) {
     .footer {
-      border-bottom: 20px solid #dddddd;
-      background: url("../images/bg-footer.png") top right no-repeat #1059a8; }
+      border-bottom: 20px solid #ffffff; }
       .footer .copyright {
-        padding: 12px 45px 0 0;
-        float: left; }
+        padding-right: 45px;
+        float: left;
+        position: relative; }
+        .footer .copyright:after {
+          content: "";
+          width: 20px;
+          height: 1px;
+          background: #ffffff;
+          position: absolute;
+          right: 15px;
+          top: 50%; }
       .footer ul {
-        padding: 0;
         justify-content: flex-start; }
         .footer ul li {
           display: inline;
-          padding: 0 10px 15px 0; }
+          padding: 0 0 15px 0; }
+          .footer ul li a {
+            padding: 0 15px; }
           .footer ul li:first-child a {
             padding-left: 0; }
       .footer .address {
@@ -405,7 +428,7 @@ body {
 
 .hero {
   background-size: cover;
-  height: 360px;
+  height: 270px;
   background-position: center center; }
 
 .italics * {
@@ -462,16 +485,14 @@ body {
     .member-address {
       margin-bottom: 45px; } }
 
-@media (min-width: 768px) {
-  .member-detail {
-    padding-top: 30px; } }
-
 .news-detail {
   position: relative; }
   .news-detail .download-pdf-link {
     font-weight: bold;
     margin-bottom: 15px;
     display: inline-block; }
+  .news-detail button {
+    margin: 0 auto; }
   @media (min-width: 768px) {
     .news-detail {
       padding-left: 60px; }
@@ -507,7 +528,6 @@ body {
     .news-detail [data-story="full-story"] > i,
     .news-detail [data-toggle="collapse"] > i {
       margin-left: 15px; }
-  .news-detail.full [data-story="excerpt"],
   .news-detail.full [data-toggle="expand"] {
     display: none; }
   .news-detail.full [data-story="full-story"],

@@ -1,4 +1,82 @@
 
+
+Updates: November
+================================
+- add in the header text capsules (to make text more visible) DONE - (css)
+- nav needs to be bold DONE - (template) H4 to H3
+- footer nav has bars separating the list items DONE - (css)
+- address in footer is a different colour DONE - (css)
+- logo in footer is right aligned to page rather than right aligned to content DONE - (css)
+- footer very bottom is grey not white DONE - (css)
+- nav doesn’t have active class DOES - (template) missing .active class
+
+Homepage:
+- dots on carousel need to be nav links to panels - we have discussed this you say it’s a bit of a faff, if it’s going to take a long time drop it DONE - (css)
+- buttons need more of a round on the corners DONE - (css)
+- our members carousel doesn’t have the company name on it - al was this added after the designs? - (templates)  copy change
+- visit site button (love fresh berries section) is a brighter red - No change
+
+Members:
+- company name slightly bigger and bold DONE - (template) H4 to H3
+
+News:
+- expand button centred and more rounded corners DONE - (css)
+
+
+Footer changes -
+<div class="top">
+    <p class="copyright">&copy; British Summer Fruits 2018</p>
+    <ul>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="tandcs.html">T&Cs</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+    </ul>
+</div>
+
+H4 to H3 on all pages
+
+
+Total time spent so far - 12 hours
+
+Files names
+_colours.scss
+_furniture.scss
+britishsummerfruits.css
+britishsummerfruits.scss
+contact.html
+hours.txt
+index.html
+members.html
+news.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Berry Good time spent (43 hours estimated)
 =================================================================================
 

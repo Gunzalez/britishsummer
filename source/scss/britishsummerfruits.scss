@@ -10,12 +10,12 @@
     display: none;
 }
 
-.visuallyhidden { 
-    position: absolute; 
-    overflow: hidden; 
-    clip: rect(0 0 0 0); 
-    height: 1px; width: 1px; 
-    margin: -1px; padding: 0; border: 0; 
+.visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px; width: 1px;
+    margin: -1px; padding: 0; border: 0;
 }
 
 .introduction {
@@ -30,7 +30,7 @@
 
     .slide {
         width: 100%;
-        height: 390px; 
+        height: 390px;
         position: relative;
     }
 
@@ -92,10 +92,9 @@
 
         .title {
             color: $brand-blue;
-            text-transform: uppercase;
             letter-spacing: 0;
             font-size: 2.6rem;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.9);
             line-height: 100%;
             padding: 12px 20px;
             margin-top: 30px;
@@ -103,7 +102,8 @@
 
             @media (min-width: $breakpoint2){
                 width: 45%;
-                font-size: 3rem;
+                font-size: 4rem;
+                letter-spacing: -1px;
             }
         }
     }
@@ -224,7 +224,7 @@ body {
 
 .main-navigation {
 
-    text-align: right;    
+    text-align: right;
     position: relative;
     height: 100px;
 
@@ -283,7 +283,7 @@ body {
             padding: 15px 7px;
             color: $brand-blue;
             font-weight: bold;
-            font-size: 1.8rem;
+            font-size: 2.0rem;
 
             &:hover,
             &.active {
@@ -307,12 +307,15 @@ body {
 
 .introduction {
     padding: 15px 0;
-    text-align: center;
     position: relative;
 
     @media (min-width: $breakpoint2){
         padding: 20px 80px;
     }
+}
+
+.centre {
+    text-align: center;
 }
 
 .hero {
@@ -383,29 +386,38 @@ body {
 .footer {
     height: 225px;
     position: relative;
-    border-bottom: 10px solid $brand-light;
+    border-bottom: 10px solid #ffffff;
     background: $brand-blue;
 
     ul {
         list-style: none;
-        margin: 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 10px 0 10px 0;
-    
+        padding: 0;
+        margin: 0;
+
         li {
             display: inline;
+            padding: 0;
 
             a {
                 display: inline-block;
+                border-right: 1px solid white;
                 color: #ffffff;
                 font-size: 1.7rem;
-                font-weight: 100;
-                padding: 10px 12px;
+                line-height: 110%;
+                padding: 0 12px;
+                font-weight: bold;
 
                 &:hover {
                     text-decoration: none;
+                }
+            }
+
+            &:nth-last-child(1){
+                a {
+                    border-right: none;
                 }
             }
         }
@@ -419,37 +431,63 @@ body {
         }
     }
 
+    .top {
+        padding: 20px 0;
+    }
+
     .copyright {
         text-align: center;
-        padding:30px 0 0 0;
-        margin-bottom: 0;
+        padding: 4px 0 0 0;
         color: #ffffff;
         font-size: 1.7rem;
+        font-weight: bold;
     }
 
     .address {
-        color: $brand-cream;
-        font-size: 1.5rem;
+        color: $brand-skyBlue;
+        font-size: 1.7rem;
         text-align: center;
+        font-weight: bold;
+    }
+
+    @media (min-width: $breakpoint1 ) {
+
+        .container {
+            background: url("../images/bg-footer.png") top right no-repeat $brand-blue;
+        }
+
     }
 
     @media (min-width: $breakpoint2){
-        border-bottom: 20px solid #dddddd;
-        background: url("../images/bg-footer.png") top right no-repeat $brand-blue;
+        border-bottom: 20px solid #ffffff;
 
         .copyright {
-            padding: 12px 45px 0 0;
+            padding-right: 45px;
             float: left;
+            position: relative;
+
+            &:after {
+                content: "";
+                width: 20px;
+                height: 1px;
+                background: #ffffff;
+                position: absolute;
+                right: 15px;
+                top: 50%;
+            }
         }
 
         ul {
-            padding: 0;
             justify-content: flex-start;
-    
+
             li {
                 display: inline;
-                padding: 0 10px 15px 0;
-    
+                padding: 0 0 15px 0;
+
+                a {
+                    padding: 0 15px;
+                }
+
                 &:first-child{
                     a {
                         padding-left: 0;
@@ -483,7 +521,7 @@ body {
 
 .hero {
     background-size: cover;
-    height: 360px;
+    height: 270px;
     background-position: center center;
 }
 
@@ -560,7 +598,7 @@ body {
 
 .member-detail {
     @media (min-width: $breakpoint2){
-        padding-top: 30px;
+        //padding-top: 30px;
     }
 }
 
@@ -571,6 +609,10 @@ body {
         font-weight: bold;
         margin-bottom: 15px;
         display: inline-block;
+    }
+
+    button {
+        margin: 0 auto;
     }
 
     @media (min-width: $breakpoint2){
@@ -620,9 +662,8 @@ body {
             margin-left: 15px;
         }
     }
-    
+
     &.full {
-        [data-story="excerpt"],
         [data-toggle="expand"] {
             display: none;
         }
