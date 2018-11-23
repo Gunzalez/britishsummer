@@ -40,10 +40,11 @@ H4 to H3 on all pages
 Total time spent so far - 12 hours
 
 Files names
+===================
 _colours.scss
 _furniture.scss
-britishsummerfruits.css
 britishsummerfruits.scss
+britishsummerfruits.css
 contact.html
 hours.txt
 index.html
